@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forschungsanfragen | Institut für Militärgeschichte</title>
+  <meta name="description" content="Zugang zu militärhistorischen Primärquellen für Wissenschaft, Museen und Bildungseinrichtungen.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Institut für Militärgeschichte">
+  <meta property="og:title" content="Forschungsanfragen | Institut für Militärgeschichte">
+  <meta property="og:description" content="Zugang zu militärhistorischen Primärquellen für Wissenschaft, Museen und Bildungseinrichtungen.">
+  <meta property="og:url" content="https://www.institut-militaergeschichte.de/forschung.html">
+  <link rel="canonical" href="https://www.institut-militaergeschichte.de/forschung.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a3a52;--navy-mid:#2d5a7b;--accent:#2e5f8a;--accent-hover:#1e4a6e;--text-dark:#2c2c2c;--text-grey:#888888;--logo-grey:#8a9aaa;--bg-light:#f5f3f0;--border:#d4ccc4;--white:#ffffff;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1rem;line-height:1.65;color:var(--text-dark);background:var(--white);}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 2px 6px rgba(0,0,0,.04);}
+nav{max-width:1200px;margin:0 auto;padding:.85rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:2rem;}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+.logo-cube{display:grid;grid-template-columns:repeat(3,12px);grid-template-rows:repeat(3,12px);gap:2px;}
+.logo-cube span{display:block;border-radius:1px;background:var(--navy);}
+.logo-cube span.grey{background:var(--logo-grey);}
+.logo-text{margin-left:12px;padding-left:12px;border-left:1px solid var(--border);line-height:1.2;}
+.logo-text .l1{display:block;font-size:.72rem;font-weight:300;color:var(--text-grey);letter-spacing:.04em;}
+.logo-text .l2{display:block;font-size:.72rem;font-weight:700;color:var(--navy);letter-spacing:.04em;}
+.nav-links{display:flex;list-style:none;gap:1.6rem;align-items:center;flex-wrap:wrap;}
+.nav-links a{text-decoration:none;color:var(--text-dark);font-size:.875rem;font-weight:400;transition:color .25s;white-space:nowrap;}
+.nav-links a:hover{color:var(--navy-mid);}
+.nav-links a.active{color:var(--navy);font-weight:600;border-bottom:2px solid var(--navy);padding-bottom:2px;}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);color:var(--white);padding:6rem 2rem;text-align:center;}
+.hero-short{padding:3rem 2rem;}
+.hero-content{max-width:860px;margin:0 auto;}
+.hero h1{font-size:2.8rem;font-weight:700;line-height:1.2;margin-bottom:1.2rem;}
+.hero p{font-size:1.05rem;font-weight:300;line-height:1.8;opacity:.92;max-width:700px;margin:0 auto 2.2rem;}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.btn{display:inline-block;padding:.8rem 1.8rem;border-radius:3px;font-size:.9rem;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:all .25s;font-family:inherit;}
+.btn-primary{background:var(--accent);color:var(--white);}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 14px rgba(46,95,138,.35);}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.7);}
+.btn-outline:hover{background:var(--white);color:var(--navy);border-color:var(--white);transform:translateY(-1px);}
+.btn-outline-dark{background:transparent;color:var(--navy);border:2px solid var(--navy);}
+.btn-outline-dark:hover{background:var(--navy);color:var(--white);transform:translateY(-1px);}
+.container{max-width:1100px;margin:0 auto;padding:0 2rem;}
+.container-narrow{max-width:820px;margin:0 auto;padding:0 2rem;}
+section{padding:4.5rem 2rem;}
+section.bg-light{background:var(--bg-light);}
+h2{font-size:2rem;font-weight:700;color:var(--navy);margin-bottom:1.1rem;}
+h2.center{text-align:center;}
+h3{font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:.6rem;}
+p.lead{font-size:1.05rem;color:var(--text-grey);line-height:1.85;margin-bottom:1.2rem;}
+.section-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:.7rem;display:block;}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2.5rem;}
+.pillar{background:var(--white);padding:2rem 1.8rem;border-radius:4px;border-top:3px solid var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.06);transition:transform .25s,box-shadow .25s;}
+.pillar:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.1);}
+.pillar-icon{font-size:1.8rem;margin-bottom:.9rem;}
+.pillar h3{font-size:1.1rem;margin-bottom:.65rem;}
+.pillar p{color:var(--text-grey);font-size:.93rem;line-height:1.7;}
+.source-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.source-quote{border-left:4px solid var(--accent);padding:1.6rem 1.8rem;background:var(--bg-light);border-radius:0 4px 4px 0;}
+.source-quote blockquote{font-size:1.1rem;font-weight:300;color:var(--navy);line-height:1.7;font-style:italic;}
+.source-quote cite{display:block;margin-top:.9rem;font-size:.82rem;color:var(--text-grey);font-style:normal;letter-spacing:.04em;}
+.method-narrative{background:var(--navy);color:var(--white);padding:3rem;border-radius:4px;}
+.method-narrative h3{color:var(--white);font-size:1.2rem;margin-bottom:1rem;}
+.method-narrative p{opacity:.88;line-height:1.8;margin-bottom:.9rem;}
+.method-narrative p:last-of-type{margin-bottom:1.5rem;}
+.research-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2rem;}
+.research-item{padding:1.6rem 1.4rem;border:1px solid var(--border);border-radius:4px;transition:border-color .25s,box-shadow .25s;}
+.research-item:hover{border-color:var(--navy-mid);box-shadow:0 3px 12px rgba(0,0,0,.07);}
+.research-item h3{font-size:1rem;margin-bottom:.5rem;}
+.research-item p{color:var(--text-grey);font-size:.88rem;line-height:1.65;}
+.faq-teaser{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;}
+.faq-group h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--accent);}
+.faq-mini{padding:.9rem 0;border-bottom:1px solid var(--border);}
+.faq-mini:last-child{border-bottom:none;}
+.faq-mini p{font-size:.88rem;color:var(--text-grey);margin-top:.3rem;line-height:1.6;}
+.faq-mini strong{font-size:.92rem;color:var(--navy);}
+.highlight{background:#f0f6fb;border:1px solid #c4d9ea;border-left:4px solid var(--accent);padding:1.4rem 1.8rem;border-radius:3px;margin:1.8rem 0;}
+.highlight p{color:var(--text-dark);font-size:.95rem;line-height:1.75;margin:0;}
+.highlight strong{color:var(--navy);}
+.warning-box{background:#f0f6fb;border:1px solid #c4d9ea;border-left:4px solid var(--accent);padding:1.4rem 1.8rem;border-radius:3px;margin:1.8rem 0;}
+.warning-box h4{color:var(--navy);margin-bottom:.6rem;font-size:.95rem;}
+.warning-box p{color:var(--text-dark);font-size:.9rem;line-height:1.75;margin-bottom:.5rem;}
+.warning-box p:last-child{margin-bottom:0;}
+.steps{list-style:none;counter-reset:steps;}
+.steps li{counter-increment:steps;display:flex;gap:1.2rem;margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid var(--border);align-items:flex-start;}
+.steps li:last-child{border-bottom:none;margin-bottom:0;}
+.steps li::before{content:counter(steps);background:var(--accent);color:var(--white);width:1.9rem;height:1.9rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;margin-top:.15rem;}
+.steps li div strong{display:block;color:var(--navy);font-weight:600;margin-bottom:.25rem;}
+.steps li div p{color:var(--text-grey);font-size:.9rem;margin:0;}
+.standards-box{background:var(--navy);color:var(--white);padding:2.5rem 2rem;border-radius:4px;}
+.standards-box h3{color:var(--white);text-align:center;margin-bottom:1.5rem;}
+.standards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;list-style:none;}
+.standards-grid li{display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;opacity:.9;line-height:1.6;}
+.standards-grid li::before{content:"✓";color:#d4a060;font-weight:700;font-size:1rem;flex-shrink:0;margin-top:.05rem;}
+.obj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin:1.5rem 0;}
+.obj-item{background:var(--white);padding:1.1rem 1rem;border-radius:4px;text-align:center;box-shadow:0 1px 5px rgba(0,0,0,.06);}
+.obj-item strong{display:block;color:var(--navy);font-size:.9rem;margin-bottom:.3rem;}
+.obj-item span{color:var(--text-grey);font-size:.82rem;}
+.privacy-box{background:var(--bg-light);border:1px solid var(--border);padding:1.4rem 1.8rem;border-radius:4px;margin:1.5rem 0;}
+.privacy-box h4{color:var(--navy);margin-bottom:.9rem;font-size:1rem;}
+.privacy-box ul{list-style:none;}
+.privacy-box ul li{padding:.55rem 0;border-bottom:1px solid var(--border);font-size:.92rem;display:flex;gap:.8rem;align-items:flex-start;line-height:1.6;}
+.privacy-box ul li:last-child{border-bottom:none;}
+.privacy-box ul li::before{content:"○";color:var(--accent);flex-shrink:0;margin-top:.1rem;}
+.faq-item{background:var(--white);border-left:4px solid var(--accent);padding:1.2rem 1.6rem;margin-bottom:.8rem;border-radius:3px;box-shadow:0 1px 5px rgba(0,0,0,.05);cursor:pointer;}
+.faq-item h4{color:var(--navy);font-size:.97rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.faq-item p{display:none;margin-top:.9rem;color:var(--text-grey);font-size:.92rem;line-height:1.75;}
+.faq-item.open p{display:block;}
+.faq-toggle{color:var(--accent);font-weight:700;flex-shrink:0;transition:transform .25s;}
+.faq-item.open .faq-toggle{transform:rotate(180deg);}
+.form-wrap{background:var(--bg-light);padding:2.5rem;border-radius:4px;}
+.form-group{margin-bottom:1.4rem;}
+label{display:block;margin-bottom:.4rem;font-weight:600;color:var(--navy);font-size:.875rem;}
+label .req{color:#c0392b;}
+input[type=text],input[type=email],input[type=tel],textarea,select{width:100%;padding:.7rem .9rem;border:1px solid var(--border);border-radius:3px;font-family:inherit;font-size:.9rem;color:var(--text-dark);background:var(--white);}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--navy-mid);}
+textarea{resize:vertical;min-height:105px;}
+fieldset{border:none;margin-bottom:1.8rem;}
+legend{font-weight:700;color:var(--navy);font-size:.95rem;padding-bottom:.5rem;border-bottom:2px solid var(--accent);width:100%;margin-bottom:1.2rem;}
+.check-group{display:flex;flex-direction:column;gap:.7rem;}
+.check-row{display:flex;gap:.55rem;align-items:flex-start;}
+.check-row input{margin-top:.22rem;cursor:pointer;}
+.check-row span{font-weight:400;color:var(--text-dark);font-size:.9rem;}
+.gender-note{font-size:.8rem;color:var(--text-grey);background:var(--bg-light);border-left:3px solid var(--border);padding:.6rem 1rem;}
+footer{background:var(--navy);color:var(--white);padding:3rem 2rem 2rem;margin-top:2rem;}
+.footer-grid{max-width:1100px;margin:0 auto 2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}
+.footer-col h4{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem;opacity:.6;}
+.footer-col p,.footer-col a{font-size:.87rem;line-height:1.7;opacity:.82;color:var(--white);text-decoration:none;display:block;margin-bottom:.35rem;}
+.footer-col a:hover{opacity:1;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1.5rem;text-align:center;font-size:.8rem;opacity:.55;max-width:1100px;margin:0 auto;}
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--navy);color:var(--white);z-index:9999;padding:1rem 2rem;box-shadow:0 -4px 20px rgba(0,0,0,.18);transform:translateY(100%);transition:transform .35s ease;}
+#cookie-banner.visible{transform:translateY(0);}
+.cookie-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.cookie-text{flex:1;min-width:220px;font-size:.85rem;line-height:1.55;opacity:.9;}
+.cookie-text a{color:#a8c8e8;text-decoration:underline;}
+.cookie-actions{display:flex;gap:.65rem;flex-shrink:0;}
+.cookie-btn{padding:.55rem 1.2rem;border-radius:3px;font-family:inherit;font-size:.82rem;font-weight:600;cursor:pointer;border:none;transition:all .2s;white-space:nowrap;}
+.cookie-btn-accept{background:var(--accent);color:var(--white);}
+.cookie-btn-accept:hover{background:var(--accent-hover);}
+.cookie-btn-decline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.4);}
+.cookie-btn-decline:hover{border-color:var(--white);background:rgba(255,255,255,.08);}
+@media(max-width:600px){.cookie-inner{flex-direction:column;gap:.8rem;}.cookie-actions{width:100%;}.cookie-btn{flex:1;text-align:center;}}
+@media(max-width:768px){.hero h1{font-size:1.9rem;}h2{font-size:1.5rem;}section{padding:2.8rem 1rem;}.source-grid{grid-template-columns:1fr;gap:1.8rem;}.faq-teaser{grid-template-columns:1fr;}.nav-links{gap:.9rem;}.form-wrap{padding:1.5rem;}}
+</style>
+</head>
+<body>
+<header><nav>
+  <a href="index.html" class="logo">
+    <div class="logo-cube"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="grey"></span></div>
+    <div class="logo-text"><span class="l1">Institut für</span><span class="l2">Militärgeschichte</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="auftrag.html">Auftrag &amp; Wirkung</a></li>
+    <li><a href="methoden.html">Unsere Methoden</a></li>
+    <li><a href="nachlass.html">Nachlass übergeben</a></li>
+    <li><a href="forschung.html">Forschungsanfragen</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav></header>
+<main>
+  <section class="hero hero-short"><div class="hero-content"><h1>Forschungsanfragen</h1><p>Das Institut für Militärgeschichte stellt erschlossene Bestände qualifizierten Forschenden und Institutionen zur Verfügung – nach klar geregelten Bedingungen und unter Wahrung des Namensschutzes.</p></div></section>
+  <div style="background:var(--bg-light);border-bottom:1px solid var(--border);"><div class="container-narrow" style="padding:.65rem 2rem;"><p class="gender-note">Aus Gründen der besseren Lesbarkeit wird auf dieser Seite die männliche Form verwendet. Sie schließt alle Geschlechter gleichermaßen ein.</p></div></div>
+  <section><div class="container-narrow">
+    <span class="section-label">Zugangsberechtigung</span>
+    <h2>Wer Zugang erhält</h2>
+    <ul class="steps">
+      <li><div><strong>Wissenschaftliche Forschung</strong><p>Historiker, Politikwissenschaftler und verwandte Disziplinen – für Dissertationen, Monografien, Aufsätze oder Forschungsprojekte.</p></div></li>
+      <li><div><strong>Institutionelle Anfragen</strong><p>Archive, Museen, Gedenkstätten und Bildungseinrichtungen – für Ausstellungen, Lehrprojekte oder eigene Bestandsergänzungen.</p></div></li>
+      <li><div><strong>Journalismus &amp; Dokumentation</strong><p>Dokumentarfilmer, investigative Journalisten und Medienproduktionen – nach Prüfung des Verwendungszwecks.</p></div></li>
+      <li><div><strong>Familienforschung</strong><p>Angehörige können sich über ein vereinfachtes Antragsverfahren an das Institut wenden. Der Namensschutz gilt dabei uneingeschränkt.</p></div></li>
+    </ul>
+  </div></section>
+  <section class="bg-light"><div class="container-narrow">
+    <span class="section-label">Nutzungsformen</span>
+    <h2>Was wir anbieten</h2>
+    <div class="pillars">
+      <div class="pillar"><div class="pillar-icon">📋</div><h3>Einsichtnahme</h3><p>Digitale oder physische Einsichtnahme – vor Ort oder per gesichertem Fernzugang für digitalisierte Materialien.</p></div>
+      <div class="pillar"><div class="pillar-icon">📤</div><h3>Reproduktionen</h3><p>Hochauflösende Digitalisate für Publikationen, Ausstellungen oder Lehrmedien – mit klar geregelten Nutzungsrechten.</p></div>
+      <div class="pillar"><div class="pillar-icon">🤝</div><h3>Kooperationsprojekte</h3><p>Längerfristige wissenschaftliche Zusammenarbeit für Projekte, die auf mehrere Bestände zugreifen.</p></div>
+    </div>
+  </div></section>
+  <section><div class="container-narrow">
+    <span class="section-label">Transparenz</span>
+    <h2>Namensschutz gilt absolut</h2>
+    <div class="highlight"><p><strong>Der vom Übergeber festgelegte Namensschutz ist verbindlich</strong> und gilt für alle Nutzungsformen ohne Ausnahme. Forscher erhalten ausschließlich den freigegebenen Umfang eines Bestands.</p></div>
+    <p class="lead">Alle Nutzungen werden dokumentiert. Übergeber können auf Wunsch erfahren, welche Forschungsvorhaben mit ihrem Bestand durchgeführt wurden.</p>
+  </div></section>
+  <section class="bg-light"><div class="container-narrow">
+    <span class="section-label">Anfrage stellen</span>
+    <h2>Forschungsanfrage stellen</h2>
+    <p class="lead" style="margin-bottom:2rem;">Wir bearbeiten Anfragen in der Regel innerhalb von zwei Wochen.</p>
+    <div class="form-wrap"><form>
+          <input type="hidden" name="_next" value="https://www.institut-militaergeschichte.de/danke.html">
+      <fieldset><legend>Kontaktdaten</legend>
+        <div class="form-group"><label for="fr-name">Name <span class="req">*</span></label><input type="text" id="fr-name" name="name" required placeholder="Vor- und Nachname"></div>
+        <div class="form-group"><label for="fr-inst">Institution / Affiliation</label><input type="text" id="fr-inst" name="institution" placeholder="Universität, Archiv, Redaktion …"></div>
+        <div class="form-group"><label for="fr-email">E-Mail-Adresse <span class="req">*</span></label><input type="email" id="fr-email" name="email" required placeholder="ihre@email.de"></div>
+      </fieldset>
+      <fieldset><legend>Forschungsvorhaben</legend>
+        <div class="form-group"><label for="fr-zweck">Art des Vorhabens <span class="req">*</span></label>
+          <select id="fr-zweck" name="zweck" required><option value="">– Bitte wählen –</option><option>Wissenschaftliche Forschung</option><option>Dissertation / Abschlussarbeit</option><option>Journalismus / Dokumentation</option><option>Ausstellung / Museum</option><option>Familienforschung</option><option>Bildung / Lehre</option><option>Sonstiges</option></select>
+        </div>
+        <div class="form-group"><label for="fr-thema">Forschungsthema &amp; gesuchte Bestände <span class="req">*</span></label><textarea id="fr-thema" name="thema" required placeholder="Beschreiben Sie Ihr Forschungsthema und welche Art von Materialien Sie suchen."></textarea></div>
+        <div class="form-group"><label for="fr-zeitraum">Zeitraum / Epoche</label><input type="text" id="fr-zeitraum" name="zeitraum" placeholder="z. B. Erster Weltkrieg, Bundeswehr …"></div>
+        <div class="form-group"><label for="fr-nutzung">Geplante Nutzungsform</label>
+          <select id="fr-nutzung" name="nutzung"><option value="">– Bitte wählen –</option><option>Einsichtnahme (digital)</option><option>Einsichtnahme (vor Ort)</option><option>Reproduktion / Digitalisate</option><option>Kooperationsprojekt</option></select>
+        </div>
+        <div class="form-group"><label for="fr-hinweis">Weitere Hinweise</label><textarea id="fr-hinweis" name="hinweis" placeholder="Fristen, besondere Anforderungen …"></textarea></div>
+      </fieldset>
+      <div class="form-group"><label class="check-row"><input type="checkbox" name="dsgvo" required> <span>Ich habe die <a href="datenschutz.html" style="color:var(--accent);">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. <span class="req">*</span></span></label></div>
+      <button type="submit" class="btn btn-primary" style="width:100%;">Anfrage absenden</button>
+    </form></div>
+  </div></section>
+</main>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>Adresse</h4><p>Institut für Militärgeschichte</p><p>Lindlaustraße 2A</p><p>53842 Troisdorf</p><p>Deutschland</p></div>
+    <div class="footer-col"><h4>Navigation</h4><a href="index.html">Startseite</a><a href="auftrag.html">Auftrag &amp; Wirkung</a><a href="methoden.html">Unsere Methoden</a><a href="nachlass.html">Nachlass übergeben</a><a href="forschung.html">Forschungsanfragen</a><a href="faq.html">Häufige Fragen</a><a href="kontakt.html">Kontakt</a></div>
+    <div class="footer-col"><h4>Newsletter &amp; Rechtliches</h4><a href="kontakt.html#newsletter">Newsletter anmelden</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutzerklärung</a></div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Institut für Militärgeschichte. Alle Rechte vorbehalten.</div>
+</footer>
+<div id="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+  <div class="cookie-inner">
+    <p class="cookie-text">Diese Website verwendet Google Analytics. Weitere Informationen in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-decline" id="cookie-decline">Ablehnen</button>
+      <button class="cookie-btn cookie-btn-accept" id="cookie-accept">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+<script>
+  document.querySelectorAll('.faq-item').forEach(el=>{el.querySelector('h4').addEventListener('click',()=>el.classList.toggle('open'));});
+  const page=window.location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')===page);});
+  document.querySelectorAll('form').forEach(form=>{form.addEventListener('submit',e=>{e.preventDefault();alert('Vielen Dank – wir melden uns in Kürze.');form.reset();});});
+  (function(){
+    var GA='G-0K7PB9E2V1',KEY='imkg_cookie_consent',banner=document.getElementById('cookie-banner');
+    function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config',GA,{anonymize_ip:true});}
+    var c=localStorage.getItem(KEY);
+    if(c==='accepted'){loadGA();}else if(c!=='declined'){setTimeout(function(){banner.classList.add('visible');},600);}
+    document.getElementById('cookie-accept').addEventListener('click',function(){localStorage.setItem(KEY,'accepted');banner.classList.remove('visible');loadGA();});
+    document.getElementById('cookie-decline').addEventListener('click',function(){localStorage.setItem(KEY,'declined');banner.classList.remove('visible');});
+  })();
+</script>
+</body>
+</html>
