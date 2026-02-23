@@ -211,7 +211,10 @@ footer{background:var(--navy);color:var(--white);padding:3rem 2rem 2rem;margin-t
     <span class="section-label">Anfrage stellen</span>
     <h2>Nachlass anfragen</h2>
     <p class="lead" style="margin-bottom:2rem;">Beschreiben Sie uns kurz, was vorhanden ist. Wir melden uns in der Regel innerhalb einer Woche.</p>
-    <div class="form-wrap"><form id="form-nachlass" action="https://formspree.io/f/mjgeaqvd" method="POST">
+    <div class="form-wrap"><form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="3fbf29a3-6c2b-41b5-bbb3-0d51ff0a2d8e">
+      <input type="hidden" name="redirect" value="https://institut-militaergeschichte.de/danke.html">
+      <input type="hidden" name="subject" value="Neue Nachlassanfrage – Institut für Militärgeschichte">
       <fieldset><legend>Ihre Kontaktdaten</legend>
         <div class="form-group"><label for="nl-name">Ihr Name <span class="req">*</span></label><input type="text" id="nl-name" name="name" required placeholder="Vor- und Nachname"></div>
         <div class="form-group"><label for="nl-email">E-Mail-Adresse <span class="req">*</span></label><input type="email" id="nl-email" name="email" required placeholder="ihre@email.de"></div>
@@ -272,26 +275,6 @@ footer{background:var(--navy);color:var(--white);padding:3rem 2rem 2rem;margin-t
     document.getElementById('cookie-accept').addEventListener('click',function(){localStorage.setItem(KEY,'accepted');banner.classList.remove('visible');loadGA();});
     document.getElementById('cookie-decline').addEventListener('click',function(){localStorage.setItem(KEY,'declined');banner.classList.remove('visible');});
   })();
-</script>
-<script>
-document.getElementById('form-nachlass').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form = e.target;
-  var data = new FormData(form);
-  fetch('https://formspree.io/f/mjgeaqvd', {
-    method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  }).then(function(response) {
-    if (response.ok) {
-      window.location.href = 'https://institut-militaergeschichte.de/danke.html';
-    } else {
-      alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.');
-    }
-  }).catch(function() {
-    alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.');
-  });
-});
 </script>
 </body>
 </html>
