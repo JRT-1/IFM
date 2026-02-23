@@ -211,10 +211,7 @@ footer{background:var(--navy);color:var(--white);padding:3rem 2rem 2rem;margin-t
     <span class="section-label">Anfrage stellen</span>
     <h2>Nachlass anfragen</h2>
     <p class="lead" style="margin-bottom:2rem;">Beschreiben Sie uns kurz, was vorhanden ist. Wir melden uns in der Regel innerhalb einer Woche.</p>
-    <div class="form-wrap"><form action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="3fbf29a3-6c2b-41b5-bbb3-0d51ff0a2d8e">
-      <input type="hidden" name="redirect" value="https://institut-militaergeschichte.de/danke.html">
-      <input type="hidden" name="subject" value="Neue Nachlassanfrage – Institut für Militärgeschichte">
+    <div class="form-wrap"><form>
       <fieldset><legend>Ihre Kontaktdaten</legend>
         <div class="form-group"><label for="nl-name">Ihr Name <span class="req">*</span></label><input type="text" id="nl-name" name="name" required placeholder="Vor- und Nachname"></div>
         <div class="form-group"><label for="nl-email">E-Mail-Adresse <span class="req">*</span></label><input type="email" id="nl-email" name="email" required placeholder="ihre@email.de"></div>
@@ -266,7 +263,6 @@ footer{background:var(--navy);color:var(--white);padding:3rem 2rem 2rem;margin-t
   document.querySelectorAll('.faq-item').forEach(el=>{el.querySelector('h4').addEventListener('click',()=>el.classList.toggle('open'));});
   const page=window.location.pathname.split('/').pop()||'index.html';
   document.querySelectorAll('.nav-links a').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')===page);});
-  document.querySelectorAll('form').forEach(form=>{form.addEventListener('submit',e=>{e.preventDefault();alert('Vielen Dank – wir melden uns in Kürze.');form.reset();});});
   (function(){
     var GA='G-0K7PB9E2V1',KEY='imkg_cookie_consent',banner=document.getElementById('cookie-banner');
     function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config',GA,{anonymize_ip:true});}
