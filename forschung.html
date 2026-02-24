@@ -193,27 +193,31 @@ footer{background:var(--navy);color:var(--white);padding:3rem 2rem 2rem;margin-t
     <span class="section-label">Anfrage stellen</span>
     <h2>Forschungsanfrage stellen</h2>
     <p class="lead" style="margin-bottom:2rem;">Wir bearbeiten Anfragen in der Regel innerhalb von zwei Wochen.</p>
-    <div class="form-wrap"><form>
-          <input type="hidden" name="_next" value="https://www.institut-militaergeschichte.de/danke.html">
-      <fieldset><legend>Kontaktdaten</legend>
-        <div class="form-group"><label for="fr-name">Name <span class="req">*</span></label><input type="text" id="fr-name" name="name" required placeholder="Vor- und Nachname"></div>
-        <div class="form-group"><label for="fr-inst">Institution / Affiliation</label><input type="text" id="fr-inst" name="institution" placeholder="Universität, Archiv, Redaktion …"></div>
-        <div class="form-group"><label for="fr-email">E-Mail-Adresse <span class="req">*</span></label><input type="email" id="fr-email" name="email" required placeholder="ihre@email.de"></div>
-      </fieldset>
-      <fieldset><legend>Forschungsvorhaben</legend>
-        <div class="form-group"><label for="fr-zweck">Art des Vorhabens <span class="req">*</span></label>
-          <select id="fr-zweck" name="zweck" required><option value="">– Bitte wählen –</option><option>Wissenschaftliche Forschung</option><option>Dissertation / Abschlussarbeit</option><option>Journalismus / Dokumentation</option><option>Ausstellung / Museum</option><option>Familienforschung</option><option>Bildung / Lehre</option><option>Sonstiges</option></select>
-        </div>
-        <div class="form-group"><label for="fr-thema">Forschungsthema &amp; gesuchte Bestände <span class="req">*</span></label><textarea id="fr-thema" name="thema" required placeholder="Beschreiben Sie Ihr Forschungsthema und welche Art von Materialien Sie suchen."></textarea></div>
-        <div class="form-group"><label for="fr-zeitraum">Zeitraum / Epoche</label><input type="text" id="fr-zeitraum" name="zeitraum" placeholder="z. B. Erster Weltkrieg, Bundeswehr …"></div>
-        <div class="form-group"><label for="fr-nutzung">Geplante Nutzungsform</label>
-          <select id="fr-nutzung" name="nutzung"><option value="">– Bitte wählen –</option><option>Einsichtnahme (digital)</option><option>Einsichtnahme (vor Ort)</option><option>Reproduktion / Digitalisate</option><option>Kooperationsprojekt</option></select>
-        </div>
-        <div class="form-group"><label for="fr-hinweis">Weitere Hinweise</label><textarea id="fr-hinweis" name="hinweis" placeholder="Fristen, besondere Anforderungen …"></textarea></div>
-      </fieldset>
-      <div class="form-group"><label class="check-row"><input type="checkbox" name="dsgvo" required> <span>Ich habe die <a href="datenschutz.html" style="color:var(--accent);">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. <span class="req">*</span></span></label></div>
-      <button type="submit" class="btn btn-primary" style="width:100%;">Anfrage absenden</button>
-    </form></div>
+    <div class="form-wrap">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="bf5bf055-3864-4b40-9e52-80cef1096c34">
+        <input type="hidden" name="redirect" value="https://www.institut-militaergeschichte.de/danke.html">
+        <input type="hidden" name="subject" value="Neue Forschungsanfrage – Institut für Militärgeschichte">
+        <fieldset><legend>Kontaktdaten</legend>
+          <div class="form-group"><label for="fr-name">Name <span class="req">*</span></label><input type="text" id="fr-name" name="name" required placeholder="Vor- und Nachname"></div>
+          <div class="form-group"><label for="fr-inst">Institution / Affiliation</label><input type="text" id="fr-inst" name="institution" placeholder="Universität, Archiv, Redaktion …"></div>
+          <div class="form-group"><label for="fr-email">E-Mail-Adresse <span class="req">*</span></label><input type="email" id="fr-email" name="email" required placeholder="ihre@email.de"></div>
+        </fieldset>
+        <fieldset><legend>Forschungsvorhaben</legend>
+          <div class="form-group"><label for="fr-zweck">Art des Vorhabens <span class="req">*</span></label>
+            <select id="fr-zweck" name="zweck" required><option value="">– Bitte wählen –</option><option>Wissenschaftliche Forschung</option><option>Dissertation / Abschlussarbeit</option><option>Journalismus / Dokumentation</option><option>Ausstellung / Museum</option><option>Familienforschung</option><option>Bildung / Lehre</option><option>Sonstiges</option></select>
+          </div>
+          <div class="form-group"><label for="fr-thema">Forschungsthema &amp; gesuchte Bestände <span class="req">*</span></label><textarea id="fr-thema" name="thema" required placeholder="Beschreiben Sie Ihr Forschungsthema und welche Art von Materialien Sie suchen."></textarea></div>
+          <div class="form-group"><label for="fr-zeitraum">Zeitraum / Epoche</label><input type="text" id="fr-zeitraum" name="zeitraum" placeholder="z. B. Erster Weltkrieg, Bundeswehr …"></div>
+          <div class="form-group"><label for="fr-nutzung">Geplante Nutzungsform</label>
+            <select id="fr-nutzung" name="nutzung"><option value="">– Bitte wählen –</option><option>Einsichtnahme (digital)</option><option>Einsichtnahme (vor Ort)</option><option>Reproduktion / Digitalisate</option><option>Kooperationsprojekt</option></select>
+          </div>
+          <div class="form-group"><label for="fr-hinweis">Weitere Hinweise</label><textarea id="fr-hinweis" name="hinweis" placeholder="Fristen, besondere Anforderungen …"></textarea></div>
+        </fieldset>
+        <div class="form-group"><label class="check-row"><input type="checkbox" name="dsgvo" required> <span>Ich habe die <a href="datenschutz.html" style="color:var(--accent);">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. <span class="req">*</span></span></label></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Anfrage absenden</button>
+      </form>
+    </div>
   </div></section>
 </main>
 <footer>
@@ -237,7 +241,6 @@ footer{background:var(--navy);color:var(--white);padding:3rem 2rem 2rem;margin-t
   document.querySelectorAll('.faq-item').forEach(el=>{el.querySelector('h4').addEventListener('click',()=>el.classList.toggle('open'));});
   const page=window.location.pathname.split('/').pop()||'index.html';
   document.querySelectorAll('.nav-links a').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')===page);});
-  document.querySelectorAll('form').forEach(form=>{form.addEventListener('submit',e=>{e.preventDefault();alert('Vielen Dank – wir melden uns in Kürze.');form.reset();});});
   (function(){
     var GA='G-0K7PB9E2V1',KEY='imkg_cookie_consent',banner=document.getElementById('cookie-banner');
     function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config',GA,{anonymize_ip:true});}
