@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -211,35 +212,40 @@ footer{background:var(--navy);color:var(--white);padding:3rem 2rem 2rem;margin-t
     <span class="section-label">Anfrage stellen</span>
     <h2>Nachlass anfragen</h2>
     <p class="lead" style="margin-bottom:2rem;">Beschreiben Sie uns kurz, was vorhanden ist. Wir melden uns in der Regel innerhalb einer Woche.</p>
-    <div class="form-wrap"><form>
-      <fieldset><legend>Ihre Kontaktdaten</legend>
-        <div class="form-group"><label for="nl-name">Ihr Name <span class="req">*</span></label><input type="text" id="nl-name" name="name" required placeholder="Vor- und Nachname"></div>
-        <div class="form-group"><label for="nl-email">E-Mail-Adresse <span class="req">*</span></label><input type="email" id="nl-email" name="email" required placeholder="ihre@email.de"></div>
-        <div class="form-group"><label for="nl-tel">Telefon (optional)</label><input type="tel" id="nl-tel" name="tel" placeholder="+49 ..."></div>
-      </fieldset>
-      <fieldset><legend>Zum Nachlass</legend>
-        <div class="form-group"><label for="nl-person">Name des Verstorbenen (optional)</label><input type="text" id="nl-person" name="person" placeholder="Für unsere erste Einschätzung"></div>
-        <div class="form-group"><label for="nl-zeitraum">Zeitraum / Epoche</label><input type="text" id="nl-zeitraum" name="zeitraum" placeholder="z. B. Erster Weltkrieg, Zweiter Weltkrieg …"></div>
-        <div class="form-group"><label>Art der Materialien</label>
-          <div class="check-group">
-            <label class="check-row"><input type="checkbox" name="mat" value="briefe"> <span>Briefe / Feldpost</span></label>
-            <label class="check-row"><input type="checkbox" name="mat" value="tagebuecher"> <span>Tagebücher</span></label>
-            <label class="check-row"><input type="checkbox" name="mat" value="fotos"> <span>Fotografien</span></label>
-            <label class="check-row"><input type="checkbox" name="mat" value="orden"> <span>Orden &amp; Auszeichnungen</span></label>
-            <label class="check-row"><input type="checkbox" name="mat" value="dienst"> <span>Dienstunterlagen (Soldbuch, Wehrpass …)</span></label>
-            <label class="check-row"><input type="checkbox" name="mat" value="objekte"> <span>Uniformen &amp; Ausrüstung</span></label>
-            <label class="check-row"><input type="checkbox" name="mat" value="av"> <span>Audiovisuelles Material</span></label>
-            <label class="check-row"><input type="checkbox" name="mat" value="sonstiges"> <span>Sonstiges</span></label>
+    <div class="form-wrap">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="3fbf29a3-6c2b-41b5-bbb3-0d51ff0a2d8e">
+        <input type="hidden" name="redirect" value="https://institut-militaergeschichte.de/danke.html">
+        <input type="hidden" name="subject" value="Neue Nachlassanfrage – Institut für Militärgeschichte">
+        <fieldset><legend>Ihre Kontaktdaten</legend>
+          <div class="form-group"><label for="nl-name">Ihr Name <span class="req">*</span></label><input type="text" id="nl-name" name="name" required placeholder="Vor- und Nachname"></div>
+          <div class="form-group"><label for="nl-email">E-Mail-Adresse <span class="req">*</span></label><input type="email" id="nl-email" name="email" required placeholder="ihre@email.de"></div>
+          <div class="form-group"><label for="nl-tel">Telefon (optional)</label><input type="tel" id="nl-tel" name="tel" placeholder="+49 ..."></div>
+        </fieldset>
+        <fieldset><legend>Zum Nachlass</legend>
+          <div class="form-group"><label for="nl-person">Name des Verstorbenen (optional)</label><input type="text" id="nl-person" name="person" placeholder="Für unsere erste Einschätzung"></div>
+          <div class="form-group"><label for="nl-zeitraum">Zeitraum / Epoche</label><input type="text" id="nl-zeitraum" name="zeitraum" placeholder="z. B. Erster Weltkrieg, Zweiter Weltkrieg …"></div>
+          <div class="form-group"><label>Art der Materialien</label>
+            <div class="check-group">
+              <label class="check-row"><input type="checkbox" name="mat" value="briefe"> <span>Briefe / Feldpost</span></label>
+              <label class="check-row"><input type="checkbox" name="mat" value="tagebuecher"> <span>Tagebücher</span></label>
+              <label class="check-row"><input type="checkbox" name="mat" value="fotos"> <span>Fotografien</span></label>
+              <label class="check-row"><input type="checkbox" name="mat" value="orden"> <span>Orden &amp; Auszeichnungen</span></label>
+              <label class="check-row"><input type="checkbox" name="mat" value="dienst"> <span>Dienstunterlagen (Soldbuch, Wehrpass …)</span></label>
+              <label class="check-row"><input type="checkbox" name="mat" value="objekte"> <span>Uniformen &amp; Ausrüstung</span></label>
+              <label class="check-row"><input type="checkbox" name="mat" value="av"> <span>Audiovisuelles Material</span></label>
+              <label class="check-row"><input type="checkbox" name="mat" value="sonstiges"> <span>Sonstiges</span></label>
+            </div>
           </div>
-        </div>
-        <div class="form-group"><label for="nl-schutz">Gewünschte Schutzebene</label>
-          <select id="nl-schutz" name="schutz"><option value="">– Noch nicht entschieden –</option><option>Vollständige Nennung</option><option>Eingeschränkte Nennung</option><option>Teilanonymisierung</option><option>Vollständige Anonymisierung</option></select>
-        </div>
-        <div class="form-group"><label for="nl-hinweis">Hinweise &amp; Besonderheiten</label><textarea id="nl-hinweis" name="hinweis" placeholder="Was sollten wir über den Nachlass wissen?"></textarea></div>
-      </fieldset>
-      <div class="form-group"><label class="check-row"><input type="checkbox" name="dsgvo" required> <span>Ich habe die <a href="datenschutz.html" style="color:var(--accent);">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. <span class="req">*</span></span></label></div>
-      <button type="submit" class="btn btn-primary" style="width:100%;">Anfrage absenden</button>
-    </form></div>
+          <div class="form-group"><label for="nl-schutz">Gewünschte Schutzebene</label>
+            <select id="nl-schutz" name="schutz"><option value="">– Noch nicht entschieden –</option><option>Vollständige Nennung</option><option>Eingeschränkte Nennung</option><option>Teilanonymisierung</option><option>Vollständige Anonymisierung</option></select>
+          </div>
+          <div class="form-group"><label for="nl-hinweis">Hinweise &amp; Besonderheiten</label><textarea id="nl-hinweis" name="hinweis" placeholder="Was sollten wir über den Nachlass wissen?"></textarea></div>
+        </fieldset>
+        <div class="form-group"><label class="check-row"><input type="checkbox" name="dsgvo" required> <span>Ich habe die <a href="datenschutz.html" style="color:var(--accent);">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. <span class="req">*</span></span></label></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Anfrage absenden</button>
+      </form>
+    </div>
   </div></section>
 </main>
 <footer>
