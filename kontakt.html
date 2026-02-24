@@ -130,7 +130,6 @@
   .footer-col p,.footer-col a{font-size:.87rem;line-height:1.7;opacity:.82;color:var(--white);text-decoration:none;display:block;margin-bottom:.35rem;}
   .footer-col a:hover{opacity:1;}
   .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1.5rem;text-align:center;font-size:.8rem;opacity:.55;max-width:1100px;margin:0 auto;}
-  /* Cookie Banner */
   #cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--navy);color:var(--white);z-index:9999;padding:1rem 2rem;box-shadow:0 -4px 20px rgba(0,0,0,.18);transform:translateY(100%);transition:transform .35s ease;}
   #cookie-banner.visible{transform:translateY(0);}
   .cookie-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
@@ -180,8 +179,10 @@
       <span class="section-label">Allgemeine Anfrage</span>
       <h3 style="margin-bottom:1.2rem;">Nachricht senden</h3>
       <div class="form-wrap" style="padding:1.8rem;">
-        <form>
-          <input type="hidden" name="_next" value="https://www.institut-militaergeschichte.de/danke.html">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="283050c8-7bb8-4e69-9d2f-55ca5311feab">
+          <input type="hidden" name="redirect" value="https://www.institut-militaergeschichte.de/danke.html">
+          <input type="hidden" name="subject" value="Neue Kontaktanfrage – Institut für Militärgeschichte">
           <div class="form-group"><label for="k-name">Name <span class="req">*</span></label><input type="text" id="k-name" name="name" required placeholder="Vor- und Nachname"></div>
           <div class="form-group"><label for="k-email">E-Mail <span class="req">*</span></label><input type="email" id="k-email" name="email" required placeholder="ihre@email.de"></div>
           <div class="form-group"><label for="k-betreff">Betreff</label><input type="text" id="k-betreff" name="betreff" placeholder="Worum geht es?"></div>
@@ -197,8 +198,10 @@
     <h2>Aus der Arbeit des Instituts</h2>
     <p class="lead">Der Newsletter des Instituts erscheint in unregelmäßigen Abständen und informiert über abgeschlossene Erschließungsprojekte, neue Bestände und wissenschaftliche Aktivitäten. Kein fester Rhythmus, kein Rauschen – nur dann, wenn es etwas zu berichten gibt.</p>
     <div class="form-wrap" style="max-width:520px;">
-      <form>
-          <input type="hidden" name="_next" value="https://www.institut-militaergeschichte.de/danke.html">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="ab414053-9a27-4eb8-9286-0633c5013659">
+        <input type="hidden" name="redirect" value="https://www.institut-militaergeschichte.de/danke.html">
+        <input type="hidden" name="subject" value="Neue Newsletter-Anmeldung – Institut für Militärgeschichte">
         <div class="form-group"><label for="nl-mail">E-Mail-Adresse <span class="req">*</span></label><input type="email" id="nl-mail" name="email" required placeholder="ihre@email.de"></div>
         <div class="form-group">
           <label class="check-row" style="font-weight:400;cursor:pointer;">
@@ -237,7 +240,7 @@
     <p class="cookie-text">Diese Website verwendet Google Analytics. Weitere Informationen in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     <div class="cookie-actions">
       <button class="cookie-btn cookie-btn-decline" id="cookie-decline">Ablehnen</button>
-      <button class="cookie-btn cookie-btn-accept"  id="cookie-accept">Akzeptieren</button>
+      <button class="cookie-btn cookie-btn-accept" id="cookie-accept">Akzeptieren</button>
     </div>
   </div>
 </div>
@@ -245,7 +248,6 @@
   document.querySelectorAll('.faq-item').forEach(el=>{el.querySelector('h4').addEventListener('click',()=>el.classList.toggle('open'));});
   const page=window.location.pathname.split('/').pop()||'index.html';
   document.querySelectorAll('.nav-links a').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')===page);});
-  document.querySelectorAll('form').forEach(form=>{form.addEventListener('submit',e=>{e.preventDefault();alert('Vielen Dank – wir melden uns in Kürze.');form.reset();});});
   (function(){
     var GA='G-0K7PB9E2V1',KEY='imkg_cookie_consent',banner=document.getElementById('cookie-banner');
     function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config',GA,{anonymize_ip:true});}
